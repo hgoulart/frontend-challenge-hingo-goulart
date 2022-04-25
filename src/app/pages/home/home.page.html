@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Countries
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="countries"> 
+    <ion-item *ngFor="let country of countries.countries" (click)="showHolidays(country)">
+      <ion-label color="dark">{{ country.code }} - {{ country.name }}</ion-label>
+      <ion-button  fill="clear"><ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

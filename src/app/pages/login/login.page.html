@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="app__login-flex">
+    <div>
+      <img src="assets/fc-logo.png" alt="frontend challenge" class="app__login-logo">
+    </div>
+    <ion-card>
+      <ion-card-content>
+        <form name="form" [formGroup]="loginForm">
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+
+        <ion-button color="success" size="full" (click)="login(loginForm)" [disabled]="!loginForm.valid">Login</ion-button>
+        <ion-button size="small" size="full" fill="clear">Forgot your password?</ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

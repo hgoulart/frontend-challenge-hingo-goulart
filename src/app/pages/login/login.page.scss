@@ -1,0 +1,14 @@
+.app__login-flex{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+ion-button[color="success"]{
+    text-transform: initial;
+    margin: 15px 0;
+}
+.app__login-logo{
+    width: 150px;
+}
