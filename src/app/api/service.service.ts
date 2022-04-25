@@ -19,12 +19,12 @@ export class ServiceService {
   authenticationState = new BehaviorSubject(false);
   apiUrl: string;
   // you can change to an env file
-  apiKey = 'YTAxY2VhZDctYjk0ZC00OWZjLWJjNjQtNzU0N2IzODYzMjgw';
+  apiKey = '';
   headers = new HttpHeaders({
     // eslint-disable-next-line @typescript-eslint/naming-convention
     'Content-Type': 'application/json; charset=utf-8',
     // eslint-disable-next-line @typescript-eslint/naming-convention
-    Authorization: 'Bearer YTAxY2VhZDctYjk0ZC00OWZjLWJjNjQtNzU0N2IzODYzMjgw'
+    Authorization: this.apiKey
   });
 
   constructor(public alertController: AlertController,
